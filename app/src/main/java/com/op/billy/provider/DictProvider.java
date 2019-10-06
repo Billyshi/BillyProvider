@@ -91,6 +91,7 @@ public class DictProvider extends ContentProvider {
                     Log.d(TAG, "rowId = "+rowId);
                     Uri wordUri = ContentUris.withAppendedId(uri, rowId);
                     notifyDataChanged(uri);
+                    return  wordUri;//返回这个插入单词的位置
                 }
             case CODE_DESCRIBE:
             case CODE_DICTS:
